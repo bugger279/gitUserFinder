@@ -14,6 +14,7 @@ async function myFunc() {
 
     // await ==> wait until the promise is resolved 
     const res = await promise;
+    return res;
 }
 
 

@@ -20,3 +20,18 @@ async function myFunc() {
 
 myFunc()
     .then(res => console.log(res));
+
+//Better Example
+
+async function getUsers() {
+    // await the respone of fetch call
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    // only proceed once its resolved 
+    const data = await response.json();
+
+    // proceed once promise is resolved
+    return data;
+}
+
+getUsers().then(users => console.log(users));
